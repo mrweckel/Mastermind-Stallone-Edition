@@ -3,5 +3,13 @@ Mastermind.Peg = function(color){
 }
 
 Mastermind.Peg.prototype = {
+  setColor: function(){
+    //
+  },
+
+  createAnswer: function(){
+
+  }
+
 
 }
