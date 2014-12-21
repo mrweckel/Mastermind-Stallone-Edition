@@ -1,16 +1,18 @@
-Mastermind.Answer = function(){
-  var current_ans = [];
+Mastermind.Answer = function(arr){
+  this.arr = arr;
 }
 
 Mastermind.Answer.prototype = {
-  addPeg: function(arr){
+  current_ans: [],
+
+  addPeg: function(){
     var peg = arr[Math.floor(Math.random() * arr.length)];
-    current_ans.push(peg);
-  }
+    return current_ans.push(peg);
+  },
 
   setAnswer: function(){
-    for(var i=0,i<4,i++){
-      this.addPeg(arr)
+    for(var i=0;i<4;i++){
+      this.addPeg();
     }
   }
 }
