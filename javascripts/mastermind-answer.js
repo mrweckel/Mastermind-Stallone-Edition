@@ -1,9 +1,16 @@
 Mastermind.Answer = function(){
-  COLORS = ["aqua.png","blue.png","green.png","orange.png","purple.png","yellow.png"]
+  var current_ans = [];
 }
 
 Mastermind.Answer.prototype = {
+  addPeg: function(arr){
+    var peg = arr[Math.floor(Math.random() * arr.length)];
+    current_ans.push(peg);
+  }
+
   setAnswer: function(){
-    //set answer based on random selection of COLORS
+    for(var i=0,i<4,i++){
+      this.addPeg(arr)
+    }
   }
 }

@@ -1,15 +1,18 @@
-Mastermind.Peg = function(color){
-  this.color = color;
+Mastermind.Peg = function(){
+  COLORS = ["aqua.png","blue.png","green.png","orange.png","purple.png","yellow.png"]
 }
 
 Mastermind.Peg.prototype = {
-  setColor: function(){
-    //
+  setColor: function(color){
+
   },
 
-  createAnswer: function(){
-
+  randomPeg: function(){
+    var answer = COLORS[Math.floor(Math.random() * COLORS.length)];
+    return answer
   }
+
+
 
 
 }
