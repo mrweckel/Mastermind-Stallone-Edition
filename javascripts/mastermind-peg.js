@@ -1,17 +1,13 @@
-Mastermind.Peg = function(){
-
+Mastermind.Peg = function(img){
+  this.img = img;
+  colors: ["aqua.png","blue.png","green.png","orange.png","purple.png","yellow.png"]
 }
 
 Mastermind.Peg.prototype = {
-  setColor: function(color){
+  img: this.img,
 
-  },
-
-  randomPeg: function(){
-
+  color: function(){
+    var color = this.img.replace(".png","");
+    return color;
   }
-
-
-
-
 }
