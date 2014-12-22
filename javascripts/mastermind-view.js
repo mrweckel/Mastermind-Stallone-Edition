@@ -8,9 +8,9 @@ Mastermind.View.prototype = {
       this.node = document.createElement("td");
       this.img  = document.createElement("img");
 
-      this.img.src = "imgs/"+ answer[i];
+      this.img.src = answer[i].img;
       this.node.appendChild(this.img);
-      document.getElementById ("answer-tr").appendChild(this.node);
+      document.getElementById("answer-tr").appendChild(this.node);
     }
   }
 }
