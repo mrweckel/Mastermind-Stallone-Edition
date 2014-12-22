@@ -3,5 +3,14 @@ Mastermind.PegColors = function(){
 }
 
 Mastermind.PegColors.prototype = {
-  colors: ["aqua.png","blue.png","green.png","orange.png","purple.png","yellow.png"]
+  colors: ["aqua","blue","green","orange","purple","yellow"],
+
+  colorObjects: [],
+
+  createObjects: function(){
+    for(var i=0; i<this.colors.length; i++){
+      var pegObject = new Mastermind.Peg(this.colors[i]);
+      this.colorObjects.push(pegObject);
+    }
+  }
 }
