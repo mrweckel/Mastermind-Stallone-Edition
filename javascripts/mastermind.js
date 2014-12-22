@@ -8,10 +8,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
   document.getElementById("new-game").onclick = function(){
-    window.answer = new Mastermind.Answer(window.colorSet.colorObjects);
-    window.answer.setAnswer();
+      window.view.clearAnswer("answer-tr");
 
-    window.view.showAnswer(window.answer.current_ans);
+      window.answer = new Mastermind.Answer(window.colorSet.colorObjects);
+
+      window.answer.setAnswer();
+
+      window.view.showAnswer(window.answer.current_ans);
   }
 
 });

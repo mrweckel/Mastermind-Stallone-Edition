@@ -11,6 +11,8 @@ Mastermind.Answer.prototype = {
   },
 
   setAnswer: function(){
+    this.current_ans = [];
+
     for(var i=0;i<4;i++){
       this.addPeg(this.arr);
     }

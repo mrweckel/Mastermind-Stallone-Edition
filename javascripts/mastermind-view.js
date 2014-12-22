@@ -12,5 +12,15 @@ Mastermind.View.prototype = {
       this.node.appendChild(this.img);
       document.getElementById("answer-tr").appendChild(this.node);
     }
+  },
+
+  clearAnswer: function(ele){
+    var node = document.getElementById(ele);
+    var child = node.firstChild;
+
+    while(child){
+      node.removeChild(child);
+      child = node.firstChild;
+    }
   }
 }
