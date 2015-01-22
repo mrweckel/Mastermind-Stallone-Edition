@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     window.guess = new Mastermind.Guess;
 
-    window.options = window.view.showObjects(window.colorSet.colorObjects, function(){
-        window.guess.guess.push(this.img)});
+    window.makeGuess = function(){
+        window.guess.guess.push(new Mastermind.Peg(this.id))}
+
+    window.options = window.view.showObjects(window.colorSet.colorObjects, window.makeGuess);
 
     window.view.clearAnswer("answer-tr");
 
