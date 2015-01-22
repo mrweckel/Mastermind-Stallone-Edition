@@ -4,6 +4,12 @@ Mastermind.Peg = function(color){
 }
 
 Mastermind.Peg.prototype = {
+  addPeg: function(arr){
+    arr.push(this);
+  },
 
+  makeGuess: function(){
+
+  }
 }
 

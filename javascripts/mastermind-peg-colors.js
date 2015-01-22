@@ -12,5 +12,6 @@ Mastermind.PegColors.prototype = {
       var pegObject = new Mastermind.Peg(this.colors[i]);
       this.colorObjects.push(pegObject);
     }
+    return this.createObjects;
   }
 }

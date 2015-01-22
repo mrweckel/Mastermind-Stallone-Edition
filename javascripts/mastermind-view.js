@@ -1,4 +1,4 @@
-Mastermind.View = function(){
+ Mastermind.View = function(){
 
 }
 
