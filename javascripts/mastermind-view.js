@@ -24,10 +24,12 @@ Mastermind.View.prototype = {
     }
   },
 
-  showObjects: function(options){
+  showObjects: function(options, func){
     for(var i=0;i<options.length;i++){
       this.node = document.createElement("td");
-      this.img = document.createElement("img")
+      this.img  = document.createElement("img");
+      this.node.id = "peg-" + i;
+      this.node.onclick = func;
 
       this.img.src = options[i].img;
       this.node.appendChild(this.img);

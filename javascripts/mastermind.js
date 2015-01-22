@@ -1,25 +1,34 @@
 document.addEventListener('DOMContentLoaded', function(){
 
   window.controller = new Mastermind.Controller();
-  window.view = (new Mastermind.View());
+
+  window.view = new Mastermind.View();
 
   window.colorSet = new Mastermind.PegColors();
+
+  //creates the pegs from color string
   window.colorSetObjects = window.colorSet.createObjects();
 
-  window.options = window.view.showObjects(window.colorSet.colorObjects);
-
+//appends the pegs to the DOM
 
   document.getElementById("new-game").onclick = function(){
-      window.view.clearAnswer("answer-tr");
+
+    window.guess = new Mastermind.Guess;
+
+    window.options = window.view.showObjects(window.colorSet.colorObjects, function(){
+        window.guess.guess.push(this.img)});
+
+    window.view.clearAnswer("answer-tr");
+
+    window.answer = new Mastermind.Answer(window.colorSet.colorObjects);
+
+    window.answer.setAnswer();
+
+    window.view.showAnswer(window.answer.current_ans);
 
 
-      window.answer = new Mastermind.Answer(window.colorSet.colorObjects);
-
-      window.answer.setAnswer();
-
-      window.view.showAnswer(window.answer.current_ans);
-
-      window.guess = new Mastermind.Guess;
+      // window.controller.choosePeg(this, window.guess.guess);
   }
+
 
 });
