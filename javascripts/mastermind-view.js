@@ -37,7 +37,13 @@ Mastermind.View.prototype = {
     };
   },
 
-  showGuess: function(peg, attr){
-    // leave off here
+  appendPegToGuess: function(peg, attr){
+    this.node = document.createElement("td");
+    this.img = document.createElement("img");
+
+    this.img.src = peg.img;
+    this.node.appendChild(this.img);
+    document.getElementById("board-tr").appendChild(this.node);
+
   }
 }
