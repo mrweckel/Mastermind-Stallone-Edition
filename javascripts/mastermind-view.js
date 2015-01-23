@@ -44,6 +44,5 @@ Mastermind.View.prototype = {
     this.img.src = peg.img;
     this.node.appendChild(this.img);
     document.getElementById("board-tr").appendChild(this.node);
-
   }
 }
