@@ -16,8 +16,14 @@ document.addEventListener('DOMContentLoaded', function(){
     //need to find a new place for this eventually
     window.makeGuess = function(){
       var new_peg = new Mastermind.Peg(this.id);
-      window.guess.guess.push(new_peg);
-      window.view.appendPegToGuess(new_peg);
+      if (window.guess.guess.length < 4) {
+        window.guess.guess.push(new_peg);
+        window.view.appendPegToGuess(new_peg);
+      } else {
+        window.guess.clearGuess(window.guess.guess);
+        window.guess.guess.push(new_peg);
+        window.view.appendPegToGuess(new_peg);
+      };
     }
 
     //second argument is the function that will run onclick of the td node
