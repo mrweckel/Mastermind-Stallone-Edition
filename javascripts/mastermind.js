@@ -9,17 +9,21 @@ document.addEventListener('DOMContentLoaded', function(){
   //creates the pegs from color string
   window.colorSetObjects = window.colorSet.createObjects();
 
-//appends the pegs to the DOM
-
   document.getElementById("new-game").onclick = function(){
-
+//GUESS functionality
     window.guess = new Mastermind.Guess;
 
+    //need to find a new place for this eventually
     window.makeGuess = function(){
-        window.guess.guess.push(new Mastermind.Peg(this.id))}
+      var new_peg = new Mastermind.Peg(this.id);
+      window.guess.guess.push(new_peg);
+      window.view.appendPegToGuess(new_peg);
+    }
 
+    //second argument is the function that will run onclick of the td node
     window.options = window.view.showObjects(window.colorSet.colorObjects, window.makeGuess);
 
+//ANSWER functionality
     window.view.clearAnswer("answer-tr");
 
     window.answer = new Mastermind.Answer(window.colorSet.colorObjects);
