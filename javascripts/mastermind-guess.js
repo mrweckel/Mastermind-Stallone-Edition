@@ -7,5 +7,7 @@ Mastermind.Guess.prototype = {
 
   clearGuess: function(arr){
     arr.length = 0;
-  }
+  },
+
+
 }

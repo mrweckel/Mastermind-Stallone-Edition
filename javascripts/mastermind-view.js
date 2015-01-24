@@ -44,13 +44,13 @@ Mastermind.View.prototype = {
     this.img.src = peg.img;
     this.node.appendChild(this.img);
 
-    var current_row = document.getElementById("board-row-" + row_num)
+    var current_row = document.getElementById(row_num)
     current_row.appendChild(this.node);
   },
 
   createRow: function(ele, num){
     var new_ele = document.createElement(ele);
-    new_ele.id = "board-row-" + num;
+    new_ele.id = num;
 
     document.getElementById("board-body").appendChild(new_ele);
   },
