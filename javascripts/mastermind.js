@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function(){
   window.view.createRow("tr", 0);
 
   document.getElementById("new-game").onclick = function(){
+
+    window.game  = new Mastermind.Game;
+
 //GUESS functionality
     window.guess = new Mastermind.Guess;
 
