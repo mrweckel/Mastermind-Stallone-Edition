@@ -37,12 +37,25 @@ Mastermind.View.prototype = {
     };
   },
 
-  appendPegToGuess: function(peg, attr){
+  appendPegToGuess: function(peg, row_num){
     this.node = document.createElement("td");
-    this.img = document.createElement("img");
+    this.img  = document.createElement("img");
 
     this.img.src = peg.img;
     this.node.appendChild(this.img);
-    document.getElementById("board-tr").appendChild(this.node);
-  }
+
+    var current_row = document.getElementById("board-row-" + row_num)
+    current_row.appendChild(this.node);
+  },
+
+  createRow: function(ele, num){
+    var new_ele = document.createElement(ele);
+    new_ele.id = "board-row-" + num;
+
+    document.getElementById("board-body").appendChild(new_ele);
+  },
+
+
+
+
 }

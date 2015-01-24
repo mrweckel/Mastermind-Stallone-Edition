@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function(){
   //creates the pegs from color string
   window.colorSetObjects = window.colorSet.createObjects();
 
+  //creates the first row
+  window.view.createRow("tr", 0);
+
   document.getElementById("new-game").onclick = function(){
 //GUESS functionality
     window.guess = new Mastermind.Guess;
