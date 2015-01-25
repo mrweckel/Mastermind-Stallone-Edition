@@ -11,7 +11,7 @@ Mastermind.Game.prototype = {
   //not working!!!!!!!!!
   checkForWin: function(guess_arr, ans_arr, prop, func){
     var winner = true;
-    for(var i=0; i<=guess_arr.length; i++){
+    for(var i=0; i<guess_arr.length; i++){
       if(guess_arr[i][prop] !== ans_arr[i][prop]){
         winner = false;
         break;
