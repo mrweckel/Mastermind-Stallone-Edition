@@ -17,7 +17,7 @@ Mastermind.Game.prototype = {
         break;
       }
     }
-    if(winner === true){
+    if(winner === true && guess_arr.length === 4){
       console.log("You have won");
     }
   },
