@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     window.indicators = new Mastermind.Indicator;
 
+    //this is just shitty--must fix ASAP
+    var correctness_row = 0;
+
 //GUESS functionality
     window.guess = new Mastermind.Guess;
 
