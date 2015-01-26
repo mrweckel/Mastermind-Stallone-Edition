@@ -1,13 +1,7 @@
 Mastermind.Indicator = function(){
-
+  this.correctness = [];
 }
 
 Mastermind.Indicator.prototype = {
-  red: function(){
 
-  },
-
-  white: function(){
-
-  }
 }
