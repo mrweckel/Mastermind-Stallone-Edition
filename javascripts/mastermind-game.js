@@ -22,9 +22,10 @@ Mastermind.Game.prototype = {
     }
   },
 
-  checkForCorrectness: function(guess_arr, ans_arr, prop, correctness_arr){
+  checkGuess: function(guess_arr, ans_arr, prop, correctness_arr){
     var destructive_arr = guess_arr;
 
+    this.checkForWin(guess_arr, ans_arr, prop, this.won);
     this.checkForPositionMatch(destructive_arr, ans_arr, prop, correctness_arr);
     this.checkForColorMatch(destructive_arr, ans_arr, prop, correctness_arr);
   },
