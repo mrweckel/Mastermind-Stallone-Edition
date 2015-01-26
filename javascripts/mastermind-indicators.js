@@ -3,5 +3,7 @@ Mastermind.Indicator = function(){
 }
 
 Mastermind.Indicator.prototype = {
-
+  clearEm: function(){
+    this.correctness = [];
+  }
 }
