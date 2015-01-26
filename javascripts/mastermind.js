@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     window.game  = new Mastermind.Game;
 
+    window.indicators = new Mastermind.Indicator;
+
 //GUESS functionality
     window.guess = new Mastermind.Guess;
 
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function(){
         window.view.appendPegToGuess(new_peg, curr_row);
         if(window.guess.guess.length == 4){
 
-          window.game.checkForCorrectness(window.guess.guess, window.answer.current_ans, "color");
+          window.game.checkForCorrectness(window.guess.guess, window.answer.current_ans, "color", window.indicators.correctness);
 
           window.game.checkForWin(window.guess.guess, window.answer.current_ans, "color", window.game.won)
         }
