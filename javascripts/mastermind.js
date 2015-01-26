@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function(){
       var new_peg = new Mastermind.Peg(this.id);
       var board_body = document.getElementById("board-body");
 
+      //find current row
       //this needs to change when I get internet
       var curr_row = parseInt(board_body.lastChild.id);
 
