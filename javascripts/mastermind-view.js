@@ -68,10 +68,14 @@ Mastermind.View.prototype = {
     var new_ele = document.createElement(ele);
     new_ele.id = num;
 
-    document.getElementById("board-body").appendChild(new_ele);
+    document.getElementById(table).appendChild(new_ele);
   },
 
+  createIndicatorRow: function(table, ele, num){
+    var new_ele = document.createElement(ele);
+    new_ele.id = "indicator-row-" + num;
 
-
+    document.getElementById(table).appendChild(new_ele);
+  }
 
 }
