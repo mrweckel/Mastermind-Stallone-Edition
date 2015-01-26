@@ -51,6 +51,11 @@ Mastermind.Game.prototype = {
         }
       }
     }
+    return guess_arr;
+  },
+
+  addIndicator: function(arr, peg){
+    arr.push(peg);
   },
 
 
