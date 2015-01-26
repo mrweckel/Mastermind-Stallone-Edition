@@ -34,9 +34,12 @@ document.addEventListener('DOMContentLoaded', function(){
       if (window.guess.guess.length < 4) {
         window.guess.guess.push(new_peg);
         window.view.appendPegToGuess(new_peg, curr_row);
-        //not working!!!!!!!!!!!!
-        window.game.checkForWin(window.guess.guess, window.answer.current_ans, "color", window.game.won)
+        if(window.guess.guess.length == 4){
 
+          window.game.checkForCorrectness(window.guess.guess, window.answer.current_ans, "color");
+
+          window.game.checkForWin(window.guess.guess, window.answer.current_ans, "color", window.game.won)
+        }
       } else if (window.guess.guess.length == 4){
 
         window.guess.clearGuess(window.guess.guess);
