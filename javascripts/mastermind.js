@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function(){
   window.colorSetObjects = window.colorSet.createObjects();
 
   //creates the first row
-  window.view.createRow("tr", 0);
+  window.view.createRow("board-body","tr", 0);
+  // window.view.createIndicatorRow("correct-body","tr", 0);
 
   document.getElementById("new-game").onclick = function(){
 
