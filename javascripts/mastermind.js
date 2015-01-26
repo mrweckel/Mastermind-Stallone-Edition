@@ -42,18 +42,30 @@ document.addEventListener('DOMContentLoaded', function(){
         window.view.appendPegToGuess(new_peg, curr_row);
         if(window.guess.guess.length == 4){
 
-          window.game.checkForCorrectness(window.guess.guess, window.answer.current_ans, "color", window.indicators.correctness);
+          window.game.checkGuess(window.guess.guess, window.answer.current_ans, "color", window.indicators.correctness);
 
-          window.game.checkForWin(window.guess.guess, window.answer.current_ans, "color", window.game.won)
+          //SHOW correctness pegs
+
+          window.view.createIndicatorRow("correct-body", "tr", correctness_row);
+
+           window.view.showCorrectnessIndicators(window.indicators.correctness, correctness_row);
+
+           correctness_row += 1;
         }
       } else if (window.guess.guess.length == 4){
+
+        window.indicators.clearEm();
 
         window.guess.clearGuess(window.guess.guess);
         window.guess.guess.push(new_peg);
 
         var new_row_num = curr_row + 1
-        window.view.createRow("tr", new_row_num);
+        window.view.createRow("board-body", "tr", new_row_num);
         window.view.appendPegToGuess(new_peg, new_row_num);
+
+        // window.view.createRow("correct-body", "tr", new_row_num);
+
+        // window.view.showCorrectnessIndicators(window.indicators.correctness, new_row_num);
       };
     }
 
