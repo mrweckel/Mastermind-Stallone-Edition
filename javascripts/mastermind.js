@@ -10,11 +10,17 @@ document.addEventListener('DOMContentLoaded', function(){
   window.colorSetObjects = window.colorSet.createObjects();
 
   //creates the first row
-  window.view.createRow("tr", 0);
+  window.view.createRow("board-body","tr", 0);
+  // window.view.createIndicatorRow("correct-body","tr", 0);
 
   document.getElementById("new-game").onclick = function(){
 
     window.game  = new Mastermind.Game;
+
+    window.indicators = new Mastermind.Indicator;
+
+    //this is just shitty--must fix ASAP
+    var correctness_row = 0;
 
 //GUESS functionality
     window.guess = new Mastermind.Guess;
@@ -24,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function(){
       var new_peg = new Mastermind.Peg(this.id);
       var board_body = document.getElementById("board-body");
 
+      //find current row
       //this needs to change when I get internet
       var curr_row = parseInt(board_body.lastChild.id);
 
@@ -33,17 +40,32 @@ document.addEventListener('DOMContentLoaded', function(){
       if (window.guess.guess.length < 4) {
         window.guess.guess.push(new_peg);
         window.view.appendPegToGuess(new_peg, curr_row);
+        if(window.guess.guess.length == 4){
 
-        //not working!!!!!!!!!!!!
-        window.game.checkForWin(window.guess.guess, window.answer.current_ans, "color", window.game.won)
-      } else {
+          window.game.checkGuess(window.guess.guess, window.answer.current_ans, "color", window.indicators.correctness);
+
+          //SHOW correctness pegs
+
+          window.view.createIndicatorRow("correct-body", "tr", correctness_row);
+
+           window.view.showCorrectnessIndicators(window.indicators.correctness, correctness_row);
+
+           correctness_row += 1;
+        }
+      } else if (window.guess.guess.length == 4){
+
+        window.indicators.clearEm();
 
         window.guess.clearGuess(window.guess.guess);
         window.guess.guess.push(new_peg);
 
         var new_row_num = curr_row + 1
-        window.view.createRow("tr", new_row_num);
+        window.view.createRow("board-body", "tr", new_row_num);
         window.view.appendPegToGuess(new_peg, new_row_num);
+
+        // window.view.createRow("correct-body", "tr", new_row_num);
+
+        // window.view.showCorrectnessIndicators(window.indicators.correctness, new_row_num);
       };
     }
 

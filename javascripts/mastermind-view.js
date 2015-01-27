@@ -48,14 +48,34 @@ Mastermind.View.prototype = {
     current_row.appendChild(this.node);
   },
 
-  createRow: function(ele, num){
+
+  showCorrectnessIndicators: function(arr, row_num){
+    for(var i=0;i<arr.length;i++){
+      this.node = document.createElement("td");
+      this.img  = document.createElement("img");
+      this.node.id = arr[i].color;
+
+      this.img.src = arr[i].img;
+      this.node.appendChild(this.img);
+
+
+      var current_row = document.getElementById("indicator-row-" + row_num)
+      current_row.appendChild(this.node);
+    };
+  },
+
+  createRow: function(table, ele, num){
     var new_ele = document.createElement(ele);
     new_ele.id = num;
 
-    document.getElementById("board-body").appendChild(new_ele);
+    document.getElementById(table).appendChild(new_ele);
   },
 
+  createIndicatorRow: function(table, ele, num){
+    var new_ele = document.createElement(ele);
+    new_ele.id = "indicator-row-" + num;
 
-
+    document.getElementById(table).appendChild(new_ele);
+  }
 
 }
