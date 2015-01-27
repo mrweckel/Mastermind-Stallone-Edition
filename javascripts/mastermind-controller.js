@@ -9,5 +9,9 @@ Mastermind.Controller.prototype = {
 
   defineView: function(view){
     this.view = view;
+  },
+
+  addPegToGuess: function(peg,guess_arr){
+        guess_arr.push(peg);
   }
 }

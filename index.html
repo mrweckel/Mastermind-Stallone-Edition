@@ -5,12 +5,14 @@
   <title>Weckelmind</title>
   <link rel="stylesheet" href="style.css"</link>
   <script src="javascripts/mastermind-app.js"></script>
+  <script src="javascripts/mastermind-game.js"></script>
   <script src="javascripts/mastermind-controller.js"></script>
   <script src="javascripts/mastermind-view.js"></script>
   <script src="javascripts/mastermind-answer.js"></script>
   <script src="javascripts/mastermind-indicators.js"></script>
   <script src="javascripts/mastermind-peg.js"></script>
   <script src="javascripts/mastermind-peg-colors.js"></script>
+  <script src="javascripts/mastermind-guess.js"></script>
   <script src="javascripts/mastermind.js"></script>
 </head>
 <body>
@@ -24,91 +26,12 @@
   </table>
   <table id="options">
     <tbody>
-      <tr>
-        <td><img src="imgs/aqua.png"></td>
-        <td><img src="imgs/blue.png"></td>
-        <td><img src="imgs/green.png"></td>
-        <td><img src="imgs/orange.png"></td>
-        <td><img src="imgs/purple.png"></td>
-        <td><img src="imgs/yellow.png"></td>
-
+      <tr id="options-tr">
       </tr>
     </tbody>
   </table>
-  <table id="mm-table">
-    <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+  <table id="board">
+    <tbody id ="board-body">
     </tbody>
   </table>
 </body>

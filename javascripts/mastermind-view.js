@@ -1,4 +1,4 @@
-Mastermind.View = function(){
+ Mastermind.View = function(){
 
 }
 
@@ -22,5 +22,40 @@ Mastermind.View.prototype = {
       node.removeChild(child);
       child = node.firstChild;
     }
-  }
+  },
+
+  showObjects: function(options, func){
+    for(var i=0;i<options.length;i++){
+      this.node = document.createElement("td");
+      this.img  = document.createElement("img");
+      this.node.id = options[i].color;
+      this.node.onclick = func;
+
+      this.img.src = options[i].img;
+      this.node.appendChild(this.img);
+      document.getElementById("options-tr").appendChild(this.node);
+    };
+  },
+
+  appendPegToGuess: function(peg, row_num){
+    this.node = document.createElement("td");
+    this.img  = document.createElement("img");
+
+    this.img.src = peg.img;
+    this.node.appendChild(this.img);
+
+    var current_row = document.getElementById(row_num)
+    current_row.appendChild(this.node);
+  },
+
+  createRow: function(ele, num){
+    var new_ele = document.createElement(ele);
+    new_ele.id = num;
+
+    document.getElementById("board-body").appendChild(new_ele);
+  },
+
+
+
+
 }
