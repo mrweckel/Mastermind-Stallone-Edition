@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
   window.controller = new Mastermind.Controller();
 
+window.controller.defineView(new Mastermind.View());
+
+  //needs to go
   window.view = new Mastermind.View();
 
   window.colorSet = new Mastermind.PegColors();
