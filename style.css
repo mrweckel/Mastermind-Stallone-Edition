@@ -24,3 +24,11 @@ td{
   width: 33%;
 }
 
+#board{
+  float: left;
+}
+
+#correct{
+  float: right;
+}
+
