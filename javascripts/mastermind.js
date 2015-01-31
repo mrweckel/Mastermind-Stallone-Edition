@@ -14,7 +14,6 @@ window.controller.defineView(new Mastermind.View());
 
   //creates the first row
   window.view.createRow("board-body","tr", 0);
-  // window.view.createIndicatorRow("correct-body","tr", 0);
 
   document.getElementById("new-game").onclick = function(){
 
@@ -23,57 +22,16 @@ window.controller.defineView(new Mastermind.View());
     window.indicators = new Mastermind.Indicator;
 
     //this is just shitty--must fix ASAP
-    var correctness_row = 0;
+
 
 //GUESS functionality
     window.guess = new Mastermind.Guess;
 
     //need to find a new place for this eventually
-    window.makeGuess = function(){
-      var new_peg = new Mastermind.Peg(this.id);
-      var board_body = document.getElementById("board-body");
-
-      //find current row
-      //this needs to change when I get internet
-      var curr_row = parseInt(board_body.lastChild.id);
-
-      //check for end of game
-      window.game.endOfGame(curr_row, 12)
-
-      if (window.guess.guess.length < 4) {
-        window.guess.guess.push(new_peg);
-        window.view.appendPegToGuess(new_peg, curr_row);
-        if(window.guess.guess.length == 4){
-
-          window.game.checkGuess(window.guess.guess, window.answer.current_ans, "color", window.indicators.correctness);
-
-          //SHOW correctness pegs
-
-          window.view.createIndicatorRow("correct-body", "tr", correctness_row);
-
-           window.view.showCorrectnessIndicators(window.indicators.correctness, correctness_row);
-
-           correctness_row += 1;
-        }
-      } else if (window.guess.guess.length == 4){
-
-        window.indicators.clearEm();
-
-        window.guess.clearGuess(window.guess.guess);
-        window.guess.guess.push(new_peg);
-
-        var new_row_num = curr_row + 1
-        window.view.createRow("board-body", "tr", new_row_num);
-        window.view.appendPegToGuess(new_peg, new_row_num);
-
-        // window.view.createRow("correct-body", "tr", new_row_num);
-
-        // window.view.showCorrectnessIndicators(window.indicators.correctness, new_row_num);
-      };
-    }
+    //end of makeGuess
 
     //second argument is the function that will run onclick of the td node
-    window.options = window.view.showObjects(window.colorSet.colorObjects, window.makeGuess);
+    window.options = window.view.showObjects(window.colorSet.colorObjects, window.controller.makeGuess);
 
 //ANSWER functionality
     window.view.clearAnswer("answer-tr");
