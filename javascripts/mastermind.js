@@ -21,14 +21,7 @@ window.controller.defineView(new Mastermind.View());
 
     window.indicators = new Mastermind.Indicator;
 
-    //this is just shitty--must fix ASAP
-
-
-//GUESS functionality
     window.guess = new Mastermind.Guess;
-
-    //need to find a new place for this eventually
-    //end of makeGuess
 
     //second argument is the function that will run onclick of the td node
     window.options = window.view.showObjects(window.colorSet.colorObjects, window.controller.makeGuess);
