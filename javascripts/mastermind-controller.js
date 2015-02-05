@@ -50,6 +50,11 @@ Mastermind.Controller.prototype = {
 
         var new_row_num = curr_row + 1
         view.createRow("board-body", "tr", new_row_num);
+        //!!!!!!!!!!!!!!!!!!!!!!
+        //left off here---------
+        view.createRow("correctness-content", "tr", new_row_num);
+        //left off here---------
+        //!!!!!!!!!!!!!!!!!!!!!!
         view.appendPegToGuess(new_peg, new_row_num);
 
       };
