@@ -23,25 +23,24 @@ Mastermind.Game.prototype = {
   },
 
   checkGuess: function(guess_arr, ans_arr, prop, correctness_arr){
-
+    var destructive_arr = ans_arr.slice();
 
     this.checkForWin(guess_arr, ans_arr, prop, this.won);
-    this.checkForPositionMatch(guess_arr, ans_arr, prop, correctness_arr);
-    this.checkForColorMatch(guess_arr, ans_arr, prop, correctness_arr);
+    this.checkForPositionMatch(guess_arr, destructive_arr, prop, correctness_arr);
+    this.checkForColorMatch(guess_arr, destructive_arr, prop, correctness_arr);
   },
 
   checkForPositionMatch: function(guess_arr, ans_arr_holder, prop, correctness_arr){
-    var destructive_arr = ans_arr_holder;
+
     for(var i=0; i<guess_arr.length; i++){
-      if(guess_arr[i][prop] === destructive_arr[i][prop]){
+      if(guess_arr[i][prop] === ans_arr_holder[i][prop]){
         console.log("Position" + i + ": Correct" );
         debugger;
         //splice is not working
-        destructive_arr.splice(i, 1, "place_holder");
+        ans_arr_holder.splice(i, 1, "place_holder");
         this.addIndicator(correctness_arr, new Mastermind.Peg("red"));
       }
     }
-    return destructive_arr;
   },
 
   checkForColorMatch: function(guess_arr, ans_arr_holder, prop, correctness_arr){
