@@ -35,8 +35,6 @@ Mastermind.Game.prototype = {
     for(var i=0; i<guess_arr.length; i++){
       if(guess_arr[i][prop] === ans_arr_holder[i][prop]){
         console.log("Position" + i + ": Correct" );
-        debugger;
-        //splice is not working
         ans_arr_holder.splice(i, 1, "place_holder");
         this.addIndicator(correctness_arr, new Mastermind.Peg("red"));
       }
