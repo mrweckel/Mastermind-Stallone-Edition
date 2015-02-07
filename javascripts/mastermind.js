@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   window.controller = new Mastermind.Controller();
 
-window.controller.defineView(new Mastermind.View());
+  window.controller.defineView(new Mastermind.View());
 
   //needs to go
   window.view = new Mastermind.View();
@@ -14,6 +14,7 @@ window.controller.defineView(new Mastermind.View());
 
   //creates the first row
   window.view.createRow("board-body","tr", 0);
+  // window.view.createIndicatorRow("correct-body","tr", 0);
 
   document.getElementById("new-game").onclick = function(){
 

@@ -61,10 +61,11 @@ Mastermind.Game.prototype = {
 
 
   won: function(){
-    console.log("You have won")
+    console.log("You have won");
   },
 
   lost: function(){
-    console.log("You have lost.")
+    console.log("You have lost.");
+    alert("You have lost.");
   }
 }
