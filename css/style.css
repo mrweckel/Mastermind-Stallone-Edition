@@ -1,0 +1,40 @@
+body{
+  text-align: center;
+}
+
+.game{
+  position: relative;
+}
+
+#answer{
+  border: 2px red solid;
+}
+
+#mm-table{
+  border: 1px black solid;
+}
+
+td{
+  border: 1px black solid;
+  width: 100px;
+  height: 100px;
+}
+
+#answer, #options{
+  margin: 0 auto;
+}
+
+#board{
+  position: abolute;
+  margin: 0 auto;
+  /*display: inline-block;*/
+  /*float:left;*/
+  /*left: 25em;*/
+}
+
+#correct{
+  display: inline-block;
+  /*float: right;*/
+}
+
+

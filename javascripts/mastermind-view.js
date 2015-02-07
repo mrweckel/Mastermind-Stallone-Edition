@@ -15,7 +15,7 @@ Mastermind.View.prototype = {
   },
 
   clearAnswer: function(ele){
-    var node = document.getElementById(ele);
+    var node  = document.getElementById(ele);
     var child = node.firstChild;
 
     while(child){
