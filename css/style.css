@@ -1,5 +1,7 @@
 body{
-  text-align: center;
+  /*text-align: center;*/
+  background: #000 url("../imgs/background.png") repeat-y;
+  background-size: cover;
 }
 
 .game{
