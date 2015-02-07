@@ -1,3 +1,11 @@
+body{
+  text-align: center;
+}
+
+.game{
+  position: relative;
+}
+
 #answer{
   border: 2px red solid;
 }
@@ -12,27 +20,21 @@ td{
   height: 100px;
 }
 
-#left{
-  width: 33%;
-}
-
-#center{
-  width: 66%;
-}
-
-#right{
-  width: 33%;
+#answer, #options{
+  margin: 0 auto;
 }
 
 #board{
-  float: left;
+  position: abolute;
+  margin: 0 auto;
+  /*display: inline-block;*/
+  /*float:left;*/
+  /*left: 25em;*/
 }
 
 #correct{
-  float: right;
+  display: inline-block;
+  /*float: right;*/
 }
 
-.board-content{
-  width: 33%;
-}
 
