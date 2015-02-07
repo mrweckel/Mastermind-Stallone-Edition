@@ -29,14 +29,80 @@ td{
 #board{
   position: abolute;
   margin: 0 auto;
-  /*display: inline-block;*/
-  /*float:left;*/
-  /*left: 25em;*/
+  -ms-transform:     rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform:         rotate(90deg);
 }
 
 #correct{
   display: inline-block;
-  /*float: right;*/
+}
+
+
+/*Peg id's*/
+#aqua{
+  background: #fff url("../imgs/aqua.png") no-repeat ;
+  display: block;
+}
+
+#aqua:hover{
+  background-position: 0 -100px;
+}
+
+#black{
+  background: #fff url("../imgs/black.png") no-repeat ;
+}
+
+#black:hover{
+  background-position: 0 -100px;
+}
+
+#blue{
+  background: #fff url("../imgs/blue.png") no-repeat ;
+}
+
+#blue:hover{
+  background-position: 0 -100px;
+}
+
+#green{
+  background: #fff url("../imgs/green.png") no-repeat ;
+}
+
+#green:hover{
+  background-position: 0 -100px;
+}
+
+#orange{
+  background: #fff url("../imgs/orange.png") no-repeat ;
+}
+
+#orange:hover{
+  background-position: 0 -100px;
+}
+
+#purple{
+  background: #fff url("../imgs/purple.png") no-repeat ;
+}
+
+#purple:hover{
+  background-position: 0 -100px;
+}
+
+#red{
+  background: #fff url("../imgs/red.png") no-repeat ;
+}
+
+#red:hover{
+  background-position: 0 -100px;
+}
+
+#yellow{
+  background: #fff url("../imgs/yellow.png") no-repeat ;
+}
+
+#yellow:hover{
+  background-position: 0 -100px;
 }
 
 
