@@ -6,10 +6,8 @@ Mastermind.View.prototype = {
   showAnswer: function(answer){
     for(var i=0; i<answer.length; i++){
       this.node = document.createElement("td");
-      this.img  = document.createElement("img");
+      this.node.id = answer[i].color;
 
-      this.img.src = answer[i].img;
-      this.node.appendChild(this.img);
       document.getElementById("answer-tr").appendChild(this.node);
     }
   },
@@ -27,12 +25,12 @@ Mastermind.View.prototype = {
   showObjects: function(options, func){
     for(var i=0;i<options.length;i++){
       this.node = document.createElement("td");
-      this.img  = document.createElement("img");
+
       this.node.id = options[i].color;
       this.node.onclick = func;
 
-      this.img.src = options[i].img;
-      this.node.appendChild(this.img);
+      // this.img.src = options[i].img;
+      // this.node.appendChild(this.img);
       document.getElementById("options-tr").appendChild(this.node);
     };
   },
