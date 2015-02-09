@@ -1,13 +1,7 @@
 body{
-  text-align: center;
-}
-
-.game{
-  position: relative;
-}
-
-#answer{
-  border: 2px red solid;
+  /*text-align: center;*/
+  background: #000 url("../imgs/background.png") repeat-y;
+  background-size: cover;
 }
 
 #mm-table{
@@ -24,17 +18,181 @@ td{
   margin: 0 auto;
 }
 
-#board{
-  position: abolute;
+/*Answer*/
+#answer-content{
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+#answer{
+  border: 2px red solid;
+}
+
+.answer-peg:hover{
+  background-position: 0;
+}
+
+/*Game Board*/
+.game{
+  z-index: -9999;
+  position: relative;
   margin: 0 auto;
-  /*display: inline-block;*/
-  /*float:left;*/
-  /*left: 25em;*/
 }
 
-#correct{
+#board{
+  margin: -300px auto 0 auto;
+  -ms-transform:     rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform:         rotate(90deg);
+}
+
+#board-body{
+}
+
+.empty-space{
+  background: #000 url("../imgs/space-lrg.png") no-repeat;
+  border: none;
+}
+
+/*Indicator Board*/
+
+#correctness-container{
+  width: 100px;
+  margin-top: -350px;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  -ms-transform:     rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform:         rotate(90deg);
+}
+
+#correctness-board{
+  position: absolute;
+  top: -600px;
+}
+
+
+
+.indicator-row{
+}
+
+
+.indicator-space{
+  background: #000 url("../imgs/space-small.png") no-repeat;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+.indicator-row div:nth-child(odd){
+  float:left;
+}
+
+.indicator-row div:nth-child(even){
+  float:right;
+}
+
+/*Peg id's*/
+.peg-selectors{
   display: inline-block;
-  /*float: right;*/
 }
 
+.peg-guess{
+  -ms-transform:     rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform:         rotate(270deg);
+}
+
+#aqua{
+  background: #fff url("../imgs/aqua.png") no-repeat ;
+}
+
+#aqua:hover{
+  background-position: 0 -100px;
+}
+
+#black{
+  background: #fff url("../imgs/black.png") no-repeat ;
+}
+
+#black:hover{
+  background-position: 0 -100px;
+}
+
+#blue{
+  background: #fff url("../imgs/blue.png") no-repeat ;
+}
+
+#blue:hover{
+  background-position: 0 -100px;
+}
+
+#green{
+  background: #fff url("../imgs/green.png") no-repeat ;
+}
+
+#green:hover{
+  background-position: 0 -100px;
+}
+
+#orange{
+  background: #fff url("../imgs/orange.png") no-repeat ;
+}
+
+#orange:hover{
+  background-position: 0 -100px;
+}
+
+#purple{
+  background: #fff url("../imgs/purple.png") no-repeat ;
+}
+
+#purple:hover{
+  background-position: 0 -100px;
+}
+
+#red{
+  background: #fff url("../imgs/red.png") no-repeat ;
+}
+
+#red:hover{
+  background-position: 0 -100px;
+}
+
+#yellow{
+  background: #fff url("../imgs/yellow.png") no-repeat ;
+}
+
+#yellow:hover{
+  background-position: 0 -100px;
+}
+
+/*Correctness Pegs*/
+#dark-red{
+  background: red url("../imgs/dark-red.png");
+  width:  50px;
+  height: 50px;
+  -ms-transform:     rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform:         rotate(270deg);
+}
+
+#white{
+  background: #fff url("../imgs/white.png");
+  width:  50px;
+  height: 50px;
+  -ms-transform:     rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform:         rotate(270deg);
+}
+
+/*Options*/
+.options-content{
+  position: absolute;
+  width: 100%;
+  margin: 75px auto 0 auto;
+}
 

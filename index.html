@@ -23,17 +23,163 @@
     <a id="new-game" href="#">New Game</a>
   </div>
 
+    <div class="game">
 
-    <div class="answer-content">
-      <table id="answer">
-        <tbody>
-          <tr id="answer-tr">
-          </tr>
-        </tbody>
-      </table>
+    <table id="board">
+      <tbody id ="board-body">
+        <tr id = 0>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 1>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 2>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 3>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 4>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 5>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 6>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 7>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 8>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 9>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 10>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+        <tr id = 11>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+          <td class="empty-space"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  <div id="correctness-container">
+    <div id="correctness-board">
+      <div class="indicator-row" id = indicator-row-0>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+        <div class="indicator-row" id=indicator-row-1>
+          <div class="indicator-space"></div>
+          <div class="indicator-space"></div>
+          <div class="indicator-space"></div>
+          <div class="indicator-space"></div>
+        </div>
+      <div class="indicator-row" id = indicator-row-2>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+       <div class="indicator-row" id = indicator-row-3>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+      <div class="indicator-row" id = indicator-row-4>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+      <div class="indicator-row" id = indicator-row-5>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+      <div class="indicator-row" id = indicator-row-6>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+      <div class="indicator-row" id = indicator-row-7>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+      <div class="indicator-row" id = indicator-row-8>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+      <div class="indicator-row" id = indicator-row-9>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+      <div class="indicator-row" id = indicator-row-10>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
+      <div class="indicator-row" id = indicator-row-11>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+        <div class="indicator-space"></div>
+      </div>
     </div>
+   </div>
 
-    <div class="options-content">
+   <div class="options-content">
       <table id="options">
         <tbody>
           <tr id="options-tr">
@@ -42,20 +188,21 @@
       </table>
     </div>
 
-  <div class="game">
-    <div class="board-content">
-      <table id="board">
-        <tbody id ="board-body">
+  </div>
+
+
+    <div id="answer-content">
+      <table id="answer">
+        <tbody>
+          <tr id="answer-tr">
+          </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="correctness-content">
-      <table id="correct">
-        <tbody id ="correct-body">
-        </tbody>
-      </table>
-    </div>
-  </div>
+
+
+<!-- temp board -->=
+
 </body>
 </html>

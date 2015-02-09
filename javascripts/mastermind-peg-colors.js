@@ -3,7 +3,7 @@ Mastermind.PegColors = function(){
 }
 
 Mastermind.PegColors.prototype = {
-  colors: ["aqua","blue","green","orange","purple","yellow"],
+  colors: ["aqua","blue","red","orange","purple","yellow","black","green"],
 
   colorObjects: [],
 
