@@ -29,36 +29,31 @@ Mastermind.View.prototype = {
       this.node.id = options[i].color;
       this.node.onclick = func;
 
-      // this.img.src = options[i].img;
-      // this.node.appendChild(this.img);
       document.getElementById("options-tr").appendChild(this.node);
     };
   },
 
   appendPegToGuess: function(peg, row_num){
     this.node = document.createElement("td");
-    this.img  = document.createElement("img");
+    this.node.id = peg.color;
+    this.node.className = "peg-guess";
 
-    this.img.src = peg.img;
-    this.node.appendChild(this.img);
+    var current_row = document.getElementById(row_num);
 
-    var current_row = document.getElementById(row_num)
-    current_row.appendChild(this.node);
+    var space = current_row.getElementsByClassName("empty-space")[0];
+
+    current_row.replaceChild(this.node, space);
   },
 
 
   showCorrectnessIndicators: function(arr, row_num){
     for(var i=0;i<arr.length;i++){
-      this.node = document.createElement("td");
-      this.img  = document.createElement("img");
+      this.node = document.createElement("div");
       this.node.id = arr[i].color;
 
-      this.img.src = arr[i].img;
-      this.node.appendChild(this.img);
-
-
       var current_row = document.getElementById("indicator-row-" + row_num)
-      current_row.appendChild(this.node);
+      var space = current_row.getElementsByClassName("indicator-space")[0];
+      current_row.replaceChild(this.node, space);
     };
   },
 
