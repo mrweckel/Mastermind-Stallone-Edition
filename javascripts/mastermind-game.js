@@ -4,8 +4,8 @@ Mastermind.Game = function(num_of_pegs){
 
 Mastermind.Game.prototype = {
 
-  endOfGame: function(rows, end_mark){
-    rows === end_mark ? this.lost() : false;
+  endOfGame: function(conditional){
+    conditional ? this.lost() : false;
   },
 
   checkForWin: function(guess_arr, ans_arr, prop, func){
