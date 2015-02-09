@@ -4,10 +4,6 @@ body{
   background-size: cover;
 }
 
-#answer{
-  border: 2px red solid;
-}
-
 #mm-table{
   border: 1px black solid;
 }
@@ -20,6 +16,22 @@ td{
 
 #answer, #options{
   margin: 0 auto;
+}
+
+/*Answer*/
+#answer-content{
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+#answer{
+  border: 2px red solid;
+}
+
+.answer-peg:hover{
+  background-position: 0;
 }
 
 /*Game Board*/
@@ -161,7 +173,7 @@ td{
 /*Correctness Pegs*/
 #dark-red{
   background: red url("../imgs/dark-red.png");
-  width: 50px;
+  width:  50px;
   height: 50px;
   -ms-transform:     rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -170,10 +182,17 @@ td{
 
 #white{
   background: #fff url("../imgs/white.png");
-  width: 50px;
+  width:  50px;
   height: 50px;
   -ms-transform:     rotate(270deg);
   -webkit-transform: rotate(270deg);
   transform:         rotate(270deg);
+}
+
+/*Options*/
+.options-content{
+  position: absolute;
+  width: 100%;
+  margin: 75px auto 0 auto;
 }
 
