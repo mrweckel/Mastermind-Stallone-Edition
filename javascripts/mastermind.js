@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function(){
   // window.view.createRow("board-body","tr", 0);
   // window.view.createIndicatorRow("correct-body","tr", 0);
 
+  window.options = window.view.showObjects(window.colorSet.colorObjects, window.controller.makeGuess);
+
   document.getElementById("new-game").onclick = function(){
 
     window.game  = new Mastermind.Game;
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
     window.guess = new Mastermind.Guess;
 
     //second argument is the function that will run onclick of the td node
-    window.options = window.view.showObjects(window.colorSet.colorObjects, window.controller.makeGuess);
+
 
 //ANSWER functionality
     window.view.clearAnswer("answer-tr");

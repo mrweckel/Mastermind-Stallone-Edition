@@ -5,7 +5,14 @@ Mastermind.Game = function(num_of_pegs){
 Mastermind.Game.prototype = {
 
   endOfGame: function(conditional){
-    conditional ? this.lost() : false;
+    if(conditional){
+      this.revealAnswer();
+      this.lost();
+    }
+  },
+
+  revealAnswer: function(){
+    document.getElementById("answer-content").style.visibility = "visible";
   },
 
   checkForWin: function(guess_arr, ans_arr, prop, func){

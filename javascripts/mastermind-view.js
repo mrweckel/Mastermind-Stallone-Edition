@@ -6,6 +6,7 @@ Mastermind.View.prototype = {
   showAnswer: function(answer){
     for(var i=0; i<answer.length; i++){
       this.node = document.createElement("td");
+      this.node.className = "answer-peg"
       this.node.id = answer[i].color;
 
       document.getElementById("answer-tr").appendChild(this.node);
