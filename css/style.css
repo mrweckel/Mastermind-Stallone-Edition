@@ -4,10 +4,6 @@ body{
   background-size: cover;
 }
 
-.game{
-  position: relative;
-}
-
 #answer{
   border: 2px red solid;
 }
