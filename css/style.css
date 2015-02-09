@@ -68,10 +68,34 @@ td{
 }
 
 
+.indicator-space{
+  background: #000 url("../imgs/space-small.png") no-repeat;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+.indicator-row div:nth-child(odd){
+  float:left;
+}
+
+.indicator-row div:nth-child(even){
+  float:right;
+}
+
 /*Peg id's*/
+.peg-selectors{
+  display: inline-block;
+}
+
+.peg-guess{
+  -ms-transform:     rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform:         rotate(270deg);
+}
+
 #aqua{
   background: #fff url("../imgs/aqua.png") no-repeat ;
-  display: block;
 }
 
 #aqua:hover{
@@ -134,4 +158,22 @@ td{
   background-position: 0 -100px;
 }
 
+/*Correctness Pegs*/
+#dark-red{
+  background: red url("../imgs/dark-red.png");
+  width: 50px;
+  height: 50px;
+  -ms-transform:     rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform:         rotate(270deg);
+}
+
+#white{
+  background: #fff url("../imgs/white.png");
+  width: 50px;
+  height: 50px;
+  -ms-transform:     rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform:         rotate(270deg);
+}
 
