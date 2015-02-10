@@ -13,6 +13,7 @@ Mastermind.Game.prototype = {
 
   revealAnswer: function(){
     document.getElementById("answer-content").style.visibility = "visible";
+    document.getElementById("title").style.visibility="hidden";
   },
 
   checkForWin: function(guess_arr, ans_arr, prop, func){
@@ -68,11 +69,14 @@ Mastermind.Game.prototype = {
 
 
   won: function(){
-    console.log("You have won");
+    this.revealAnswer();
+    document.getElementById("modal").style.visibility="visible";
+
+    document.getElementById("winner").style.visibility="visible";
   },
 
   lost: function(){
-    console.log("You have lost.");
-    alert("You have lost.");
+    document.getElementById("modal").style.visibility="visible";
+    document.getElementById("loser").style.visibility="visible";
   }
 }
