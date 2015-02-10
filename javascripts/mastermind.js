@@ -4,40 +4,38 @@ document.addEventListener('DOMContentLoaded', function(){
 
   window.controller.defineView(new Mastermind.View());
 
-  //needs to go
-  window.view = new Mastermind.View();
+  window.view = window.controller.view;
 
+  window.controller.defineGuess(new Mastermind.Guess());
+
+  window.guess =  window.controller.guess;
+
+//Peg Option Creation and Display
   window.colorSet = new Mastermind.PegColors();
 
   //creates the pegs from color string
   window.colorSetObjects = window.colorSet.createObjects();
 
-  //creates the first row
-  // window.view.createRow("board-body","tr", 0);
-  // window.view.createIndicatorRow("correct-body","tr", 0);
-
   window.options = window.view.showObjects(window.colorSet.colorObjects, window.controller.makeGuess);
 
-    window.game  = new Mastermind.Game;
 
-    window.indicators = new Mastermind.Indicator;
+  window.game  = new Mastermind.Game;
 
-    window.guess = new Mastermind.Guess;
+  window.indicators = new Mastermind.Indicator;
 
-    //second argument is the function that will run onclick of the td node
+
 
 
 //ANSWER functionality
-    window.view.clearAnswer("answer-tr");
+    window.controller.view.clearAnswer("answer-tr");
 
     window.answer = new Mastermind.Answer(window.colorSet.colorObjects);
 
     window.answer.setAnswer();
 
-    window.view.showAnswer(window.answer.current_ans);
+    window.controller.view.showAnswer(window.answer.current_ans);
 
-    document.getElementById("play-again").onclick = function(){
-        location.reload();
-    }
 
+//After game is over
+    window.controller.playAgain();
 });

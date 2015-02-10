@@ -1,5 +1,4 @@
 Mastermind.Controller = function(){
-
 }
 
 Mastermind.Controller.prototype = {
@@ -9,6 +8,10 @@ Mastermind.Controller.prototype = {
 
   defineView: function(view){
     this.view = view;
+  },
+
+  defineGuess: function(guess){
+    this.guess = guess;
   },
 
   addPegToGuess: function(peg,guess_arr){
