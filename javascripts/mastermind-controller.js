@@ -23,35 +23,39 @@ Mastermind.Controller.prototype = {
       var board_body = document.getElementById("board-body");
 
       var row = document.getElementsByClassName("empty-space")[0].parentNode;
-      // var correctness_body = document.getElementById("correct-body");
 
+      // debugger;
       //find current row
       var curr_row_num = parseInt(row.id);
 
-      if (window.guess.guess.length < 4) {
-        window.guess.guess.push(new_peg);
+      if (guess.arr.length < 4) {
+        guess.arr.push(new_peg);
         view.appendPegToGuess(new_peg, curr_row_num);
-        if(window.guess.guess.length === 4){
+        if(guess.arr.length === 4){
 
           window.game.endOfGame(curr_row_num + 1 == 12);
 
-          window.game.checkGuess(window.guess.guess, window.answer.current_ans, "color", window.indicators.correctness);
-
-          // view.createIndicatorRow("correct-body", "tr", curr_row_num);
+          window.game.checkGuess(window.guess.arr, window.answer.current_ans, "color", window.indicators.correctness);
 
            view.showCorrectnessIndicators(window.indicators.correctness, curr_row_num);
 
-           window.guess.clearGuess(window.guess.guess);
+           guess.clearGuess(window.guess.arr);
 
         window.indicators.clearEm();
         }
-      } else if (window.guess.guess.length == 4){
+      } else if (guess.arr.length == 4){
 
 
-        window.guess.guess.push(new_peg);
+        window.guess.arr.push(new_peg);
 
         var new_row_num = curr_row_num + 1
 
       };
+  },
+
+  playAgain: function(){
+    document.getElementById("play-again").onclick = function(){
+        location.reload();
+    }
   }
 }
