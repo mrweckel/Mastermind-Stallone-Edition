@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
   window.options = window.view.showObjects(window.colorSet.colorObjects, window.controller.makeGuess);
 
-  document.getElementById("new-game").onclick = function(){
-
     window.game  = new Mastermind.Game;
 
     window.indicators = new Mastermind.Indicator;
@@ -40,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
       // window.controller.choosePeg(this, window.guess.guess);
-  }
 
 
 });
