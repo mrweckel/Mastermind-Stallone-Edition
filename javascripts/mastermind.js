@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     window.view.showAnswer(window.answer.current_ans);
 
-
-      // window.controller.choosePeg(this, window.guess.guess);
-
+    document.getElementById("play-again").onclick = function(){
+        location.reload();
+    }
 
 });
