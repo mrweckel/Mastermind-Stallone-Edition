@@ -108,67 +108,75 @@ td{
 }
 
 #aqua{
-  background: #fff url("../imgs/aqua.png") no-repeat ;
+  background: #000 url("../imgs/aqua.png") no-repeat ;
 }
 
-#aqua:hover{
+.options-content #aqua:hover{
   background-position: 0 -100px;
+  cursor: pointer;
 }
 
 #black{
-  background: #fff url("../imgs/black.png") no-repeat ;
+  background: #000 url("../imgs/black.png") no-repeat ;
 }
 
-#black:hover{
+.options-content #black:hover{
   background-position: 0 -100px;
+  cursor: pointer;
 }
 
 #blue{
-  background: #fff url("../imgs/blue.png") no-repeat ;
+  background: #000 url("../imgs/blue.png") no-repeat ;
 }
 
-#blue:hover{
+.options-content #blue:hover{
   background-position: 0 -100px;
+  cursor: pointer;
 }
 
 #green{
-  background: #fff url("../imgs/green.png") no-repeat ;
+  background: #000 url("../imgs/green.png") no-repeat ;
 }
 
-#green:hover{
+.options-content #green:hover{
   background-position: 0 -100px;
+  cursor: pointer;
 }
 
 #orange{
-  background: #fff url("../imgs/orange.png") no-repeat ;
+  background: #000 url("../imgs/orange.png") no-repeat ;
 }
 
-#orange:hover{
+.options-content #orange:hover{
   background-position: 0 -100px;
+  cursor: pointer;
 }
 
 #purple{
-  background: #fff url("../imgs/purple.png") no-repeat ;
+  background: #000 url("../imgs/purple.png") no-repeat ;
 }
 
-#purple:hover{
+.options-content #purple:hover{
   background-position: 0 -100px;
+  cursor: pointer;
 }
 
 #red{
-  background: #fff url("../imgs/red.png") no-repeat ;
+  background: #000 url("../imgs/red.png") no-repeat ;
 }
 
-#red:hover{
+.options-content #red:hover{
   background-position: 0 -100px;
+  cursor: pointer;
 }
 
 #yellow{
-  background: #fff url("../imgs/yellow.png") no-repeat ;
+  background: #000 url("../imgs/yellow.png") no-repeat ;
 }
 
-#yellow:hover{
+.options-content #yellow:hover{
   background-position: 0 -100px;
+  cursor: pointer;
 }
 
 /*Correctness Pegs*/
