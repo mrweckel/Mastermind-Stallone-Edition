@@ -1,5 +1,4 @@
 body{
-  /*text-align: center;*/
   background: #000 url("../imgs/background.png") repeat-y;
   background-size: cover;
 }
@@ -22,8 +21,11 @@ td{
 #answer-content{
   visibility: hidden;
   position: absolute;
-  top: 10px;
+  top: 0;
   width: 100%;
+  -ms-transform: scale(0.5,0.5);
+  -webkit-transform: scale(0.5,0.5);
+  transform: scale(0.5,0.5);
 }
 
 #answer{
@@ -36,13 +38,12 @@ td{
 
 /*Game Board*/
 .game{
-  z-index: -9999;
   position: relative;
   margin: 0 auto;
 }
 
 #board{
-  margin: -300px auto 0 auto;
+  margin: -375px auto 0 auto;
   -ms-transform:     rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform:         rotate(90deg);
