@@ -33,8 +33,6 @@ Mastermind.Controller.prototype = {
 
       var row = document.getElementsByClassName("empty-space")[0].parentNode;
 
-      // debugger;
-      //find current row
       var curr_row_num = parseInt(row.id);
 
       if (guess.arr.length < 4) {
@@ -42,23 +40,19 @@ Mastermind.Controller.prototype = {
         view.appendPegToGuess(new_peg, curr_row_num);
         if(guess.arr.length === 4){
 
-          window.game.endOfGame(curr_row_num + 1 == 12);
+          game.endOfGame(curr_row_num + 1 == 12);
 
-          window.game.checkGuess(window.guess.arr, window.answer.current_ans, "color", window.indicators.correctness);
+          game.checkGuess(guess.arr, window.answer.current_ans, "color", indicators.correctness);
 
-           view.showCorrectnessIndicators(window.indicators.correctness, curr_row_num);
+          view.showCorrectnessIndicators(indicators.correctness, curr_row_num);
 
-           guess.clearGuess(window.guess.arr);
+          guess.clearGuess(guess.arr);
 
-        window.indicators.clearEm();
+        indicators.clearEm();
         }
       } else if (guess.arr.length == 4){
-
-
-        window.guess.arr.push(new_peg);
-
-        var new_row_num = curr_row_num + 1
-
+          guess.arr.push(new_peg);
+          var new_row_num = curr_row_num + 1
       };
   },
 
