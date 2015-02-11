@@ -2,16 +2,25 @@ Mastermind.Controller = function(){
 }
 
 Mastermind.Controller.prototype = {
-  showAnswer: function(){
-    this.view.showAnswer(this);
-  },
 
   defineView: function(view){
     this.view = view;
+    return this.view;
   },
 
   defineGuess: function(guess){
     this.guess = guess;
+    return this.guess;
+  },
+
+  defineGame: function(game){
+    this.game = game;
+    return this.game;
+  },
+
+  defineIndicators: function(indicators){
+    this.indicators = indicators;
+    return this.indicators;
   },
 
   addPegToGuess: function(peg,guess_arr){
