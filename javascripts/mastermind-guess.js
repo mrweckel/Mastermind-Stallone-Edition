@@ -3,10 +3,10 @@ Mastermind.Guess = function(){
 };
 
 Mastermind.Guess.prototype = {
-  guess: [],
+  arr: [],
 
-  clearGuess: function(arr){
-    arr.length = 0;
+  clearGuess: function(array){
+    array.length = 0;
   },
 
 

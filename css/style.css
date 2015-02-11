@@ -3,10 +3,6 @@ body{
   background-size: cover;
 }
 
-#mm-table{
-  border: 1px black solid;
-}
-
 td{
   border: 1px black solid;
   width: 100px;
@@ -117,7 +113,7 @@ td{
 }
 
 #black{
-  background: #000 url("../imgs/black.png") no-repeat ;
+  background: #000 url("../imgs/black.png") no-repeat;
 }
 
 .options-content #black:hover{
@@ -126,7 +122,7 @@ td{
 }
 
 #blue{
-  background: #000 url("../imgs/blue.png") no-repeat ;
+  background: #000 url("../imgs/blue.png") no-repeat;
 }
 
 .options-content #blue:hover{

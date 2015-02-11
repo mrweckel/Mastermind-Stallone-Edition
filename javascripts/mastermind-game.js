@@ -25,8 +25,7 @@ Mastermind.Game.prototype = {
       }
     }
     if(winner === true && guess_arr.length === 4){
-      //temporary
-      alert("You have won");
+      this.won();
     }
   },
 
@@ -60,7 +59,6 @@ Mastermind.Game.prototype = {
         }
       }
     }
-    // return ans_arr_holder;
   },
 
   addIndicator: function(arr, peg){
